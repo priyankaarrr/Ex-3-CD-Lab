@@ -13,6 +13,7 @@ To write a yacc program to recognize a valid arithmetic expression that uses ope
 8.	Enter an arithmetic expression as input and the tokens are identified as output.
 # PROGRAM
 FLEX FILE
+```
 %{
 #include "y.tab.h"
 %}
@@ -39,7 +40,9 @@ FLEX FILE
 int yywrap() {
     return 1;
 }
+```
 BISON FILE
+```
 %{
 #include <stdio.h>
 #include <stdlib.h>
@@ -72,7 +75,7 @@ int main() {
 void yyerror(char *s) {
     fprintf(stderr, "Error: %s\n", s);
 }
-
+```
 # OUTPUT
 
 <img width="948" height="751" alt="image" src="https://github.com/user-attachments/assets/feb433bc-16f2-4ed6-a054-c438551f4b2a" />
